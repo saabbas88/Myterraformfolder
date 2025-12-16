@@ -10,5 +10,13 @@ tags = {
 }
 
 resource "aws_s3_bucket" "name" {
-  bucket = "my-artifact-bkttt"
+  bucket = "my-artifact-bkt9999"
 }
+
+#Note: when multiple developer work on the same terraform state fiele (terraform.tf)
+#Merge conflict in terraform.tfstate
+#if a developer run terraform  plan on outdate state file and another applies changes, the state will be out of  sync.
+  
+#Solution is below
+# need to implement state locking provision by using DynanmoDB process.
+
